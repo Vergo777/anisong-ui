@@ -1,0 +1,11 @@
+<mat-card class="anisong-card">
+  <mat-card-header>
+    <mat-card-title>{{event.description}}</mat-card-title>
+    <mat-card-subtitle>{{convertIsoStringToDate(event.startTime)}} -  {{convertIsoStringToDate(event.endTime)}} UTC</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{event.url}}
+    </p>
+  </mat-card-content>
+</mat-card>

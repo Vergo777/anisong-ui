@@ -1,16 +1,43 @@
+import { CallbackPipe } from './common/callback.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule, MatToolbarModule, MatButtonModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AnisongOverviewComponent } from './anisong-overview/anisong-overview.component';
+import { AnisongOverviewEventComponent } from './anisong-overview/anisong-overview-event/anisong-overview-event.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    AnisongOverviewComponent,
+    AnisongOverviewEventComponent,
+    CallbackPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    FlexLayoutModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CallbackPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

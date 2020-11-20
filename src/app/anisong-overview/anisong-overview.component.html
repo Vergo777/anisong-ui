@@ -1,0 +1,13 @@
+<div id="container" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <form class="eventSearchForm" fxFlex="85">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search events</mat-label>
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput placeholder="Touyama Nao/東山奈央" [(ngModel)]='eventFilterText' name='eventFilterInput'>
+    </mat-form-field>
+  </form>
+
+  <div class="eventDiv" fxFlex="35" *ngFor="let event of eventData | callback: filterEvents">
+    <app-anisong-overview-event [event]=event></app-anisong-overview-event>
+  </div>
+</div>
