@@ -12,6 +12,8 @@ import { AnisongOverviewEventComponent } from './anisong-overview/anisong-overvi
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LinkyModule } from 'ngx-linky';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    LinkyModule
   ],
   providers: [CallbackPipe],
   bootstrap: [AppComponent]
